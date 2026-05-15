@@ -303,7 +303,8 @@ join Projects p on wa.project_id = p.project_id
 where ed.working_status = 'Active' and p.budget < 4000000;
 
 -- PHẦN 5: INDEX & VIEW
--- câu 1
+-- câu 1 Tạo một chỉ mục (index) tên idx_assignment_dates trên bảng Work_Assignments dựa trên hai cột start_date và completed_date nhằm tối ưu truy vấn.
+
 create index idx_assignment_dates  on Work_Assignments(start_date ,completed_date );
 
 -- câu 2 hiển thị mã phân công, tên nhân viên, tên dự án,
